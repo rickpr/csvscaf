@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cid:</strong>
+  <%= @coursera.cid %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @coursera.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @coursera.email %>
+</p>
+
+<%= link_to 'Edit', edit_coursera_path(@coursera) %> |
+<%= link_to 'Back', courseras_path %>
