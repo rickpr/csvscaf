@@ -70,6 +70,13 @@ class CourserasController < ApplicationController
      Coursera.create(import)
     end
   end
+
+  def sendit
+    @courseras = Coursera.all
+    @courseras.each do |coursera|
+      Experiment.experiment_mail(mailname: coursera.name, mailemail: coursera.email).deliver
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_coursera

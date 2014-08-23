@@ -72,6 +72,13 @@ class SubjectsController < ApplicationController
     end
   end
 
+  def sendit
+    @subjects = Subject.all
+    @subjects.each do |subject|
+      Innocuous.innocuous_mail(mailname: subject.name, mailemail: subject.email).deliver
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subject
