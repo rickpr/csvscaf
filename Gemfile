@@ -40,3 +40,6 @@ gem 'spring',        group: :development
 
 #SmarterCSV
 gem 'smarter_csv'
+
+#Mandrill
+gem 'mandrill-rails'
